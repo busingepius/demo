@@ -18,11 +18,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public Product getProductById(int id) {
-//        for (Product p : products) {
-//            if (p.getId() == id) return p;
-//        }
         return products.stream().filter((p) -> p.getId() == id).findAny().get();
-//        return null;
     }
 
     @Override
